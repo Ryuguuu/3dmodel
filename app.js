@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     modelEntity.addEventListener('model-loaded', function () {
         console.log('3Dモデルが読み込まれました');
     });
+
+    modelEntity.addEventListener('model-error', function (e) {
+        console.error('モデルの読み込みに失敗しました:', e.detail?.src || e);
+        alert('モデルの読み込みに失敗しました');
+    });
+    
     marker.addEventListener('markerFound', function() {
         console.log('マーカーを検出しました');
         // マーカー検出時に追加のアニメーションなどを実装可能
