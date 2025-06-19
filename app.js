@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const marker = document.querySelector('a-marker');
     marker.addEventListener('markerFound', function() {
         console.log('マーカーを検出しました');
+        alert('マーカーを検出しました');
         // マーカー検出時に追加のアニメーションなどを実装可能
     });
 
