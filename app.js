@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ARシーンが読み込まれたらローディング画面を非表示
     const scene = document.querySelector('a-scene');
     scene.addEventListener('loaded', function () {
+        alert('ARシーンが読み込まれました');
         setTimeout(() => {
             loadingScreen.classList.add('hidden');
         }, 1000);
