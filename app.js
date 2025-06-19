@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // マーカーが検出されたときの処理
     const marker = document.querySelector('a-marker');
+    const modelEntity = marker.querySelector('[gltf-model]');
+    modelEntity.addEventListener('model-loaded', function () {
+        console.log('3Dモデルが読み込まれました');
+        alert('3Dモデルが読み込まれました');
+    });
     marker.addEventListener('markerFound', function() {
         console.log('マーカーを検出しました');
         alert('マーカーを検出しました');
