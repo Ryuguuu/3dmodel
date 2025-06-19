@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     marker.addEventListener('markerFound', function() {
         console.log('マーカーを検出しました');
+        modelEntity.setAttribute('visible', 'true');
         // マーカー検出時に追加のアニメーションなどを実装可能
     });
 
     // マーカーを見失ったときの処理
     marker.addEventListener('markerLost', function() {
         console.log('マーカーを見失いました');
+        modelEntity.setAttribute('visible', 'false');
     });
 
     // 説明を閉じるボタンの処理
